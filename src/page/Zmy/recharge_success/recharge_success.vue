@@ -15,7 +15,7 @@
       <p>{{ $store.state.num }}</p>
       <p>获得{{ $store.state.num }}积分</p>
     </div>
-    <Foot text='去租车吧'></Foot>
+    <Foot text='去租车吧' class="footr"></Foot>
   </div>
 </template>
 
@@ -76,6 +76,10 @@ export default {
     font-size: .12rem;
     color:#333333;
   }
+}
+.footr{
+  margin-top: 1.3rem;
+  // margin-right: .16rem;
 }
 
 </style>

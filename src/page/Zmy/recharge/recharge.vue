@@ -112,7 +112,6 @@ export default {
     var mySwiper = new Swiper(".lunbo", {
       direction: "horizontal", // 垂直切换选项
       loop: true, // 循环模式选项
-      autoplay: 5000,
       slidesPerView: "auto",
       centeredSlides: true,
       spaceBetween: 16
@@ -171,7 +170,7 @@ export default {
   text-align: left;
 }
 .cen {
-  padding: 0.27rem 0.16rem 0.25rem 0.16rem;
+  padding: 0.23rem 0.16rem 0.25rem 0.16rem;
   width: 100%;
   ul {
     display: flex;
@@ -217,10 +216,11 @@ export default {
   padding: 0 0.29rem;
   text-align: left;
   width: 100%;
+  height: 2rem;
   .pay {
     font-size: 0.14rem;
     font-weight: bold;
-    padding: 0.12rem 0;
+    padding: 0.1rem 0;
     border-bottom: 1px solid #e8e8e8;
     color: red;
     span{
@@ -230,11 +230,11 @@ export default {
   .p_style {
     font-size: 0.14rem;
     font-weight: bold;
-    padding-top: 0.12rem;
+    padding-top: 0.08rem;
     ul {
       li {
         font-weight: normal;
-        padding: 0.12rem 0 0.12rem 0.42rem;
+        padding: 0.1rem 0 0.1rem 0.42rem;
         border-bottom: 1px solid #e8e8e8;
         font-size: 0.13rem;
       }

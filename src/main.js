@@ -15,6 +15,9 @@ Vue.use(Vant);
 import Vuex from 'vuex';
 Vue.use(Vuex);
 
+import axios from 'axios'
+Vue.prototype.$axios = axios;
+
 let store = new Vuex.Store({
   state:{
     num:500,

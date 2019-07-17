@@ -7,22 +7,22 @@
     </Header>
     <div class="content">
       <div class="jifen">
-        <ul>
+        <ul v-for="(item ,index) in singer" :key="index">
           <li>
             <a href>
-              <span>1200</span>
+              <span>{{ item.Integral }}</span>
               <span>积分</span>
             </a>
           </li>
           <li>
             <a href>
-              <span>1200</span>
+              <span>{{ item.balance }}</span>
               <span>余额</span>
             </a>
           </li>
           <li>
             <a href>
-              <span>2030</span>
+              <span>{{ item.pingjiaGold }}</span>
               <span>平驾币</span>
             </a>
           </li>
@@ -58,8 +58,7 @@
     </div>
     <router-link to='/recharge'>
       <Foot text='现在去充值'></Foot>
-    </router-link>
-    
+    </router-link>    
   </div>
 </template>
 
@@ -68,12 +67,32 @@ import Header from "./../../../components/Zmy/head/head";
 import Foot from "./../../../components/Zmy/foot";
 export default {
   data() {
-    return {};
+    return {
+      list:[],
+      singer:[]
+    };
+  },
+  computed:{
+    countNum:function(){
+    }
   },
   methods: {},
   components: {
     Header,
     Foot
+  },
+  mounted(){
+    this.$axios.post('http://172.25.1.156:8080/user/getuserbyid?id=?').then((res)=>{
+      console.log(res);
+      this.list = res.data;
+      for(let i=0;i<this.list.length;i++){
+        if(this.list[i].id='user_id'){
+          this.singer=this.list.splice(i,1)
+        }
+      }
+    }).catch((err)=>{
+      console.log(err)
+    })
   }
 };
 </script>
@@ -86,13 +105,11 @@ export default {
     font-size: 0.24rem;
     color: #333333;
     box-sizing: border-box;
-    // padding-bottom: .16rem;
     ul {
       display: flex;
       flex-direction: row;
       height: 100%;
       li {
-        // padding-top: 1rem;
         flex: 1;
         a {
           color: #333333;
@@ -182,7 +199,7 @@ export default {
     margin: .18rem .16rem 0.11rem .16rem;
     p{
         font-size: .12rem;
-        padding: .12rem 0 0 .12rem;
+        padding: .07rem 0 0 .12rem;
         list-style: none;
         text-align: left;
         font-weight: bold;

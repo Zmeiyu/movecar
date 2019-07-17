@@ -11,23 +11,20 @@ export default {
   props:['text'],
   data() {
     return {
-
     }
   },
   methods: {
-
   },
   components: {
-
   }
 }
 </script>
 
 <style scoped lang='less'>
 .foot{
-  position: fixed;
-  bottom: 0;
-  margin: 0 .16rem .16rem .16rem;
+  // position: absolute;
+  // bottom: 0;
+  margin: 0.06rem .16rem .16rem .16rem;
   width: 3.43rem;
   height: .39rem;
   background: #F9C307;
