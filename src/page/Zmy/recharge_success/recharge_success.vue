@@ -35,6 +35,19 @@ export default {
   components: {
     Header,
     Foot
+  },
+  mounted(){
+    this.axios.post('http://172.25.1.194:8080/user/recharge',
+    this.qs.stringify({
+      money:this.$store.state.num,
+      id:this.$store.state.id
+    })
+    ).then((res)=>{
+      console.log(res);
+      
+    }).catch((err)=>{
+      console.log(err)
+    })
   }
 }
 </script>
@@ -60,6 +73,7 @@ export default {
 }
 .suc{
   width: 100%;
+  height: 3.72rem;
   img{
     // padding: .2rem 1.33rem 0 1.53rem;
     width: .89rem;

@@ -30,6 +30,7 @@ import Recharge from './../page/Zmy/recharge/recharge.vue'
 import Recharge_success from './../page/Zmy/recharge_success/recharge_success.vue'
 //我的钱包
 import Wallet from './../page/Zmy/wallet/wallet.vue'
+// import Zhifu from './../components/Zmy/zhifu.vue'
 
 
 // 2J列表

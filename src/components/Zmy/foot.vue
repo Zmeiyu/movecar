@@ -1,24 +1,28 @@
 <template>
   <div>
-    <div class="foot">
+    <div class="foot" @click='ff()'>
       {{ text }}
     </div>
   </div>
 </template>
 
 <script>
+import Tj from './../../page/Zmy/tj'
 export default {
   props:['text'],
   data() {
     return {
-
+      bol:true,
     }
   },
   methods: {
-
+    ff(){
+      // this.bol =! this.bol;
+      console.log(this.bol);
+      Tj.$emit('cz',this.bol)
+    }
   },
   components: {
-
   }
 }
 </script>
@@ -27,7 +31,7 @@ export default {
 .foot{
   position: fixed;
   bottom: 0;
-  margin: 0 .16rem .16rem .16rem;
+  margin: 0 .16rem .1rem .16rem;
   width: 3.43rem;
   height: .39rem;
   background: #F9C307;
@@ -36,5 +40,4 @@ export default {
   font-size:.16rem;
   border-radius: .2rem
 }
-
 </style>

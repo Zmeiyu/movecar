@@ -7,9 +7,9 @@ import router from './router'
 import Axios from "axios"
 Vue.prototype.axios = Axios
 
-// import VueAwesomeSwiper from 'vue-awesome-swiper'
-// import 'swiper/dist/css/swiper.css'
-// Vue.use(VueAwesomeSwiper, /* { default global options } */);
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper, /* { default global options } */);
 
 import Vant from 'vant';
 import 'vant/lib/index.css';
@@ -17,6 +17,9 @@ Vue.use(Vant);
 
 import Vuex from 'vuex';
 Vue.use(Vuex);
+
+import qs from 'qs';
+Vue.prototype.qs = qs;
 
 //引入地图组件
 import BaiduMap from 'vue-baidu-map'
@@ -27,7 +30,7 @@ Vue.use(BaiduMap, {
 let store = new Vuex.Store({
   state:{
     num:500,
-    
+    id:1   
   },
   mutations:{
     change(state,v){

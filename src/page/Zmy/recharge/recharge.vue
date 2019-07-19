@@ -5,6 +5,7 @@
         <img src="./../img/icon_back@2x.png" />
       </router-link>
     </Header>
+    <!-- <Banner></Banner> -->
     <div class="swiper-container lunbo">
       <div class="swiper-wrapper">
         <div class="swiper-slide lia">
@@ -13,24 +14,25 @@
             <img src="./1.png" />送300积分
           </p>
         </div>
-        <div class="swiper-slide lib">
+        <!-- <div class="swiper-slide lib">
           <p>1000平驾币</p>
           <p>
             <img src="./1.png" />送100积分
           </p>
-        </div>
-        <div class="swiper-slide lic">
+        </div> -->
+        <!-- <div class="swiper-slide lic">
           <p>3000平驾币</p>
           <p>
             <img src="./1.png" />送400积分
           </p>
-        </div>
-        <div class="swiper-slide lid">
+        </div> -->
+        <!-- <div class="swiper-slide lid">
           <p>5000平驾币</p>
           <p>
             <img src="./1.png" />送600积分
           </p>
-        </div>
+        </div> -->
+        
       </div>
     </div>
     <div class="text">1积分=1元,每单最高可使用积分冲抵40%的租车费用</div>
@@ -73,19 +75,21 @@
         >同意平驾分时租车租赁协议</van-checkbox>
       </p>
     </div>
-    <router-link to="/recharge_success">
-      <Foot text="确认支付"></Foot>
-    </router-link>
+    <Foot text="确认支付"  @click='ff()'></Foot>
+    <!-- <router-link to="/recharge_success"> 
+    </router-link> -->
+    <Zhifu></Zhifu>
   </div>
 </template>
 <script src='./jquery-3.4.0.min.js'></script>
 <script>
 </script>
 <script>
-import Swiper from "swiper";
 import Header from "./../../../components/Zmy/head/head";
 import jquery from "./jquery-3.4.0.min.js";
 import Foot from "./../../../components/Zmy/foot";
+import Swiper from './../../../../node_modules/swiper/dist/js/swiper';
+import Zhifu from './../../../components/Zmy/zhifu'
 
 export default {
   data() {
@@ -94,7 +98,9 @@ export default {
       c_color: false,
       num1: 200,
       num2: 300,
-      num3: 500
+      num3: 500,
+      bol:false
+      
     };
   },
   methods: {
@@ -111,11 +117,17 @@ export default {
     },
     fn2() {
       this.$store.commit("change", this.num3);
+    },
+    ff(){
+      this.bol=!this.bol;
+      console.log(this.bol);
     }
   },
   components: {
     Header,
-    Foot
+    Foot,
+    Zhifu
+    // Banner
   },
   mounted() {
     var mySwiper = new Swiper(".lunbo", {
@@ -138,14 +150,15 @@ export default {
 </script>
 
 <style scoped lang='less'>
+@import './../../../../node_modules/swiper/dist/css/swiper.min.css';
 .re {
   text-align: center;
+  height: 100%;
   .lunbo {
     padding: 0.12rem 0;
     .swiper-wrapper {
-      transform: translateX(-468px);
       .swiper-slide {
-        width: 2.26rem;
+        width: 3.6rem;
         height: 1.17rem;
         border-radius: 0.1rem;
         font-size: 0.13rem;
@@ -184,10 +197,12 @@ export default {
     font-weight: bold;
     font-family: PingFang-SC-Bold;
     text-align: left;
+    height: .384rem;
   }
   .cen {
     padding: 0.27rem 0.16rem 0.25rem 0.16rem;
     width: 100%;
+    height: 1.73rem;
     ul {
       display: flex;
       flex-direction: row;
@@ -232,10 +247,11 @@ export default {
     padding: 0 0.29rem;
     text-align: left;
     width: 100%;
+    height: 2.48rem;
     .pay {
       font-size: 0.14rem;
       font-weight: bold;
-      padding: 0.12rem 0;
+      padding-bottom: .12rem;
       border-bottom: 1px solid #e8e8e8;
       color: red;
       span {
@@ -245,11 +261,11 @@ export default {
     .p_style {
       font-size: 0.14rem;
       font-weight: bold;
-      padding-top: 0.12rem;
+      padding-top: 0.08rem;
       ul {
         li {
           font-weight: normal;
-          padding: 0.12rem 0 0.12rem 0.42rem;
+          padding: 0.1rem 0 0.12rem 0.42rem;
           border-bottom: 1px solid #e8e8e8;
           font-size: 0.13rem;
         }
