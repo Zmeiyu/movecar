@@ -16,6 +16,7 @@ import Attestation from '@/components/Zyb/attescar/attestation'
 import Setting from '@/components/Zyb/setting/setting'
 import Locat from '@/components/Zyb/location/locat'
 import Shop from '@/components/Zyb/shop/shop'
+import Mendian from "@/components/Zyb/mendian/mendian"
 
 
 //到店取车
@@ -200,6 +201,12 @@ export default new Router({
       path: '/Locat',
       name: 'Locat',
       component: Locat
+    },
+    // 门店
+    {
+      path:'/Mendian',
+      name:'Mendian',
+      component:Mendian
     },
     // 门店列表
     {
