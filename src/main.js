@@ -33,6 +33,7 @@ Vue.use(Vant);
 import Vuex from 'vuex';
 Vue.use(Vuex);
 
+<<<<<<< HEAD
 import qs from 'qs';
 Vue.prototype.qs = qs;
 
@@ -41,6 +42,10 @@ import BaiduMap from 'vue-baidu-map'
 Vue.use(BaiduMap, {
   ak: '0dWyNG1uG7vQLwHkhrj9m8Mf4P4UsCOt'
 })
+=======
+import axios from 'axios'
+Vue.prototype.$axios = axios;
+>>>>>>> origin/master
 
 let store = new Vuex.Store({
   state: {

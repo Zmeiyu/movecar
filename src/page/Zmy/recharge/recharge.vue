@@ -176,8 +176,51 @@ export default {
           }
         }
       }
+<<<<<<< HEAD
       .lia {
         background: #f9c307;
+=======
+    }
+  }
+  .lia {
+    background: #f9c307;
+  }
+  .lib {
+    background: #33ccff;
+  }
+  .lic {
+    background: yellowgreen;
+  }
+  .lid {
+    background: #f55378;
+  }
+}
+.text {
+  font-size: 0.14rem;
+  color: #333333;
+  padding: 0 0.53rem 0 0.57rem;
+  font-weight: bold;
+  font-family: PingFang-SC-Bold;
+  text-align: left;
+}
+.cen {
+  padding: 0.23rem 0.16rem 0.25rem 0.16rem;
+  width: 100%;
+  ul {
+    display: flex;
+    flex-direction: row;
+    li {
+      flex-direction: column;
+      justify-content: space-between;
+      width: 0.92rem;
+      height: 1.21rem;
+      border: 1px solid #999999;
+      border-radius: 0.05rem;
+      font-size: 0.12rem;
+      color: #333333;
+      p:nth-child(1) {
+        margin-top: 0.25rem;
+>>>>>>> origin/master
       }
       .lib {
         background: #33ccff;
@@ -190,11 +233,22 @@ export default {
       }
     }
   }
+<<<<<<< HEAD
   .text {
+=======
+}
+.botm {
+  padding: 0 0.29rem;
+  text-align: left;
+  width: 100%;
+  height: 2rem;
+  .pay {
+>>>>>>> origin/master
     font-size: 0.14rem;
     color: #333333;
     padding: 0 0.53rem 0 0.57rem;
     font-weight: bold;
+<<<<<<< HEAD
     font-family: PingFang-SC-Bold;
     text-align: left;
     height: .384rem;
@@ -203,10 +257,24 @@ export default {
     padding: 0.27rem 0.16rem 0.25rem 0.16rem;
     width: 100%;
     height: 1.73rem;
+=======
+    padding: 0.1rem 0;
+    border-bottom: 1px solid #e8e8e8;
+    color: red;
+    span{
+      color:#333333;
+    }
+  }
+  .p_style {
+    font-size: 0.14rem;
+    font-weight: bold;
+    padding-top: 0.08rem;
+>>>>>>> origin/master
     ul {
       display: flex;
       flex-direction: row;
       li {
+<<<<<<< HEAD
         flex-direction: column;
         justify-content: space-between;
         width: 0.92rem;
@@ -237,6 +305,12 @@ export default {
       }
       .cor {
         border: 1px solid #f9c307;
+=======
+        font-weight: normal;
+        padding: 0.1rem 0 0.1rem 0.42rem;
+        border-bottom: 1px solid #e8e8e8;
+        font-size: 0.13rem;
+>>>>>>> origin/master
       }
       li:nth-child(2) {
         margin: 0 0.35rem;

@@ -56,9 +56,15 @@
         </ol>
       </div>
     </div>
+<<<<<<< HEAD
     <router-link to="/recharge">
       <Foot text="现在去充值"></Foot>
     </router-link>
+=======
+    <router-link to='/recharge'>
+      <Foot text='现在去充值'></Foot>
+    </router-link>    
+>>>>>>> origin/master
   </div>
 </template>
 
@@ -69,18 +75,29 @@ import qs from "qs";
 export default {
   data() {
     return {
+<<<<<<< HEAD
       list: [],
       singer: []
     };
   },
   computed: {
     countNum: function() {}
+=======
+      list:[],
+      singer:[]
+    };
+  },
+  computed:{
+    countNum:function(){
+    }
+>>>>>>> origin/master
   },
   methods: {},
   components: {
     Header,
     Foot
   },
+<<<<<<< HEAD
   mounted() {
     this.axios
       .post(
@@ -103,11 +120,26 @@ export default {
       .catch(err => {
         console.log(err);
       });
+=======
+  mounted(){
+    this.$axios.post('http://172.25.1.156:8080/user/getuserbyid?id=?').then((res)=>{
+      console.log(res);
+      this.list = res.data;
+      for(let i=0;i<this.list.length;i++){
+        if(this.list[i].id='user_id'){
+          this.singer=this.list.splice(i,1)
+        }
+      }
+    }).catch((err)=>{
+      console.log(err)
+    })
+>>>>>>> origin/master
   }
 };
 </script>
 
 <style scoped lang='less'>
+<<<<<<< HEAD
 .wal {
   text-align: center;
   .content {
@@ -135,6 +167,32 @@ export default {
               font-size: 0.14rem;
               font-weight: normal;
             }
+=======
+.content {
+  .jifen {
+    width: 100%;
+    height: 1.16rem;
+    font-size: 0.24rem;
+    color: #333333;
+    box-sizing: border-box;
+    ul {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      li {
+        flex: 1;
+        a {
+          color: #333333;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 0.53rem;
+          font-weight: bold;
+          span:nth-child(2) {
+            padding-top: 0.05rem;
+            font-size: 0.14rem;
+            font-weight: normal;
+>>>>>>> origin/master
           }
         }
       }
@@ -207,12 +265,32 @@ export default {
       margin-left: 0.16rem;
       color: white;
     }
+<<<<<<< HEAD
     .tt {
       margin: 0.18rem 0.16rem 0.11rem 0.16rem;
       height: 2.14rem;
       p {
         font-size: 0.12rem;
         padding: 0.07rem 0 0 0.12rem;
+=======
+  }
+  .add {
+    width: 3.43rem;
+    height: 0.38rem;
+    line-height: 0.38rem;
+    font-size: 0.15rem;
+    margin-top: 0.38rem;
+    background: #f3c200;
+    border-radius: 0.05rem;
+    margin-left: 0.16rem;
+    color: white;
+  }
+  .tt{
+    margin: .18rem .16rem 0.11rem .16rem;
+    p{
+        font-size: .12rem;
+        padding: .07rem 0 0 .12rem;
+>>>>>>> origin/master
         list-style: none;
         text-align: left;
         font-weight: bold;
